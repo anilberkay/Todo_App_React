@@ -1,0 +1,41 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+node_modules/
+# Build files
+build/
+# Environment variables
+.env
+# MacOS specific files
+.DS_Store
+# IDE specific directories
+.idea/
+.vscode/
+.vs/
+# Log files
+*.log
+*.log.*
+# Lock files
+yarn.lock
+package-lock.json
