@@ -11,23 +11,37 @@ import { Todo_item } from './Todo_item';
   const [todo,setTodo] = useState([]); 
 
 
+
   const handleChange = (e) => {
     setInput(e.target.value)
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (input.trim() !== '') {
-      const newTodo = {
-          task: input,
-          checked: false,
-      }
+    try{
+      if (input.trim() !== '') {
+        if (todo.length >= 14) {
+          alert("Maximum todo limit reached!");
+          return;
+        }
+        const newTodo = {
+            task: input,
+            checked: false,
+        }
 
-    setTodo([...todo , newTodo])
-    todoInput.current.focus();
-    todoInput.current.value = " ";
+      setTodo([...todo , newTodo])
+      todoInput.current.focus();
+      todoInput.current.value = " ";
+      setInput("")
+    }
+    else {
+      alert("Do not leave the To do field blank!")
+    }
   }
+  catch{
+    alert("Do not leave the To do field blank!")
   }
+}
   
   useEffect(() => {
     

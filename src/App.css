@@ -88,13 +88,18 @@ body{
     margin-bottom: 15px;
     align-items: center;
     color: #6FCA00;
+    min-height: 30px;
 }
 
 .todo-p{
-    height: 15px;
+    max-width: 200px;
     display: flex;
     position: relative;
     top: 3px;
     left: 5px;
+    word-break: break-all;
 }
 
+.todo-child-p{
+    margin-right: 60px;
+}

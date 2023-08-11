@@ -21,24 +21,26 @@ export const Todo_item = ({todo,setTodo}) => {
     };
 
     return (
-    <div className='todo-item'> 
-            {
-                todo.map((item,index) => {
-                    return(
-                    <div className='todo-div' key={index}>
-                        <p  className={`todo-p ${item.checked ? 'checked' : ''}`}>{item.task} 
+        <div className='todo-item'>
+            {todo.map((item, index) => {
+            return (
+                <div className='todo-div' key={index}>
+                    <div className={`todo-p ${item.checked ? 'checked' : ''}`}>
+                        
+                        <p className='todo-child-p'>{item.task}</p>
 
                         <span className='icon'>
-                            <FaRegCheckCircle className='icon-checked' onClick={() => handleChecked(index)}/>
+                        <FaRegCheckCircle className='icon-checked' onClick={() => handleChecked(index)} />
                         </span>
 
-                        <span onClick={()=> handleDelete(index)} className='icon'>
-                            <FaTrashAlt className='icon-delete' />
+                        <span onClick={() => handleDelete(index)} className='icon'>
+                        <FaTrashAlt className='icon-delete' />
                         </span>
-                        </p>
-                     </div> 
-                )})
-            }
-        </div>
+
+                    </div>
+                </div>
+            );
+            })}
+      </div>
   )
 }
